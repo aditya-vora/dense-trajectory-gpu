@@ -6,9 +6,12 @@ This repository contains the code for computing the dense trajectory for any vid
 * OpenCV with CUDA support
 * FFMPEG
 
-### Compilation
+### Compilation and running the code
 * The compilation of the code can be done by following steps: 
 ```
-
-    git clone https://github.com/AadityaVora/dense-trajectory-gpu.git
+git clone https://github.com/AadityaVora/dense-trajectory-gpu.git
+cd dense-trajectory-gpu
+g++ DenseTrack.cpp -o DenseTrack.o `pkg-config --cflags --libs opencv` -lopencv_gpu
+./DenseTrack.o ./test_sequences/<video-name>
 ```
+
